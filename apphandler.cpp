@@ -594,6 +594,8 @@ ipmi::RspType<uint8_t,  // Device ID
     const char* filename = "/usr/share/ipmi-providers/dev_id.json";
     constexpr auto ipmiDevIdStateShift = 7;
     constexpr auto ipmiDevIdFw1Mask = ~(1 << ipmiDevIdStateShift);
+    
+    log<level::ERR>("Device ID file OPEN");
 
     if (!dev_id_initialized)
     {
